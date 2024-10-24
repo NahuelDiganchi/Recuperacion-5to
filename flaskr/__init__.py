@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app(test_config=None):
     #create and configure the app
@@ -37,5 +37,10 @@ def create_app(test_config=None):
     from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
+
+    @app.route('/editarmail' 'GET','POST')
+    def editar_mail():
+        return render_template('editarmail.html')
+
 
     return app

@@ -1,15 +1,11 @@
-{% extends 'base.html' %}
-
-{% block header %}
-  <h1>{% block title %}loguearse{% endblock %}</h1>
-{% endblock %}
-
-{% block content %}
-  <form method="post">
-    <label for="username">usuario</label>
-    <input name="username" id="username" required>
-    <label for="password">contraseña</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="loguearse">
-  </form>
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}loguearse{% endblock %}</h1>
+{% endblock %} {% block content %}
+<form method="post">
+  <label for="username">usuario o email</label>
+  <input name="username" id="username" required />
+  <label for="password">contraseña</label>
+  <input type="password" name="password" id="password" required />
+  <input type="submit" value="loguearse" />
+</form>
 {% endblock %}

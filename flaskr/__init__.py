@@ -38,7 +38,7 @@ def create_app(test_config=None):
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
 
-    @app.route('/editarmail' 'GET','POST')
+    @app.route('/editarmail', methods=('GET','POST'))
     def editar_mail():
         return render_template('editarmail.html')
 
